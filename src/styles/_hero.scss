@@ -1,0 +1,59 @@
+@use 'variaveis';
+
+//hero se refere a um chamada com botões ou seja um baner
+
+.hero { 
+    padding: 5.6vh;
+    min-height: 80vh;   //80% da area visivel
+    background-image: url(../images/hero_desktop.jpeg);
+    text-align: center;
+    background-size: cover;     //para preencher todo o container preservando a proporção da imagem
+
+    &__content {
+        max-width: 640px;
+
+        &__branding {
+            max-width: 320px;
+            margin: 0 auto 38px;
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {  //seletor mais avançado para referenciar o ultimo p 
+                margin-top: 60px;
+            }
+        }
+
+        &__combos {
+            display: flex;
+            justify-content: space-between;
+
+            &__combo {
+                width: calc(50% - 12px);
+                background-color: red;
+
+                img {
+                    max-width: 60px;
+                }
+
+                button {
+                    display: block;
+                    width: 100%;
+                    height: 60px;
+                    font-size: 18px;
+                    color: variaveis.$corTextoSecundario;
+                    background-color: #6421ff;
+                    text-transform: uppercase;
+                    border-radius: 4px;
+                    margin-top: 2vw;
+                    margin-botton: 8px;
+                }
+            }
+        } 
+    }
+}
